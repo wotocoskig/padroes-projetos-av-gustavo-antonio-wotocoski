@@ -1,0 +1,65 @@
+<mxfile host="app.diagrams.net" modified="2026-10-20T19:10:00.000Z" agent="Mozilla/5.0" version="24.0.0" type="device">
+  <diagram id="abstract-factory-q2-b12" name="Questao 2 - Abstract Factory">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="main" value="&lt;b&gt;Main&lt;/b&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;hr size=&quot;1&quot;/&gt;+ &lt;u&gt;main(args: String[]): void&lt;/u&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="60" y="60" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="matricula" value="&lt;b&gt;Matricula&lt;/b&gt;&lt;hr size=&quot;1&quot;/&gt;- factory: MatriculaFactory&lt;hr size=&quot;1&quot;/&gt;+ Matricula(factory: MatriculaFactory)&lt;br/&gt;+ confirmarMatricula(): void" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="380" y="50" width="260" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="factory" value="&lt;center&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br/&gt;&lt;b&gt;MatriculaFactory&lt;/b&gt;&lt;/center&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;hr size=&quot;1&quot;/&gt;+ criarDocumentoFiscal(): DocumentoFiscal&lt;br/&gt;+ criarPagamento(): Pagamento&lt;br/&gt;+ criarComprovanteMatricula(): ComprovanteMatricula" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="350" y="230" width="320" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="br_factory" value="&lt;center&gt;&lt;b&gt;BrasilMatriculaFactory&lt;/b&gt;&lt;/center&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;hr size=&quot;1&quot;/&gt;+ criarDocumentoFiscal(): DocumentoFiscal&lt;br/&gt;+ criarPagamento(): Pagamento&lt;br/&gt;+ criarComprovanteMatricula(): ComprovanteMatricula" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="160" y="430" width="320" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="cl_factory" value="&lt;center&gt;&lt;b&gt;ChileMatriculaFactory&lt;/b&gt;&lt;/center&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;hr size=&quot;1&quot;/&gt;+ criarDocumentoFiscal(): DocumentoFiscal&lt;br/&gt;+ criarPagamento(): Pagamento&lt;br/&gt;+ criarComprovanteMatricula(): ComprovanteMatricula" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="540" y="430" width="320" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="doc_fiscal" value="&lt;center&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br/&gt;&lt;b&gt;DocumentoFiscal&lt;/b&gt;&lt;/center&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;hr size=&quot;1&quot;/&gt;+ getDescricao(): String" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="980" y="50" width="230" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="pagamento" value="&lt;center&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br/&gt;&lt;b&gt;Pagamento&lt;/b&gt;&lt;/center&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;hr size=&quot;1&quot;/&gt;+ getDescricao(): String" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="980" y="340" width="230" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="comprovante" value="&lt;center&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br/&gt;&lt;b&gt;ComprovanteMatricula&lt;/b&gt;&lt;/center&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;hr size=&quot;1&quot;/&gt;+ getDescricao(): String" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="980" y="630" width="230" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="doc_br" value="&lt;center&gt;&lt;b&gt;DocumentoFiscalBrasil&lt;/b&gt;&lt;/center&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;hr size=&quot;1&quot;/&gt;+ getDescricao(): String" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="850" y="190" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="doc_cl" value="&lt;center&gt;&lt;b&gt;DocumentoFiscalChile&lt;/b&gt;&lt;/center&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;hr size=&quot;1&quot;/&gt;+ getDescricao(): String" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="190" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="pag_br" value="&lt;center&gt;&lt;b&gt;PagamentoBrasil&lt;/b&gt;&lt;/center&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;hr size=&quot;1&quot;/&gt;+ getDescricao(): String" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="850" y="480" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="pag_cl" value="&lt;center&gt;&lt;b&gt;PagamentoChile&lt;/b&gt;&lt;/center&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;hr size=&quot;1&quot;/&gt;+ getDescricao(): String" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="480" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="comp_br" value="&lt;center&gt;&lt;b&gt;ComprovanteMatriculaBrasil&lt;/b&gt;&lt;/center&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;hr size=&quot;1&quot;/&gt;+ getDescricao(): String" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="850" y="770" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="comp_cl" value="&lt;center&gt;&lt;b&gt;ComprovanteMatriculaChile&lt;/b&gt;&lt;/center&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;hr size=&quot;1&quot;/&gt;+ getDescricao(): String" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="770" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" style="endArrow=open;endSize=12;dashed=1;html=1;" edge="1" parent="1" source="main" target="matricula"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e2" value="-factory" style="endArrow=open;endSize=12;html=1;" edge="1" parent="1" source="matricula" target="factory"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e3" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;" edge="1" parent="1" source="br_factory" target="factory"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e4" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;" edge="1" parent="1" source="cl_factory" target="factory"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e5" value="" style="endArrow=open;endSize=12;dashed=1;html=1;" edge="1" parent="1" source="matricula" target="doc_fiscal"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e6" value="" style="endArrow=open;endSize=12;dashed=1;html=1;" edge="1" parent="1" source="matricula" target="pagamento"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e7" value="" style="endArrow=open;endSize=12;dashed=1;html=1;" edge="1" parent="1" source="matricula" target="comprovante"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e8" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;" edge="1" parent="1" source="doc_br" target="doc_fiscal"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e9" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;" edge="1" parent="1" source="doc_cl" target="doc_fiscal"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e10" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;" edge="1" parent="1" source="pag_br" target="pagamento"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e11" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;" edge="1" parent="1" source="pag_cl" target="pagamento"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e12" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;" edge="1" parent="1" source="comp_br" target="comprovante"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e13" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;" edge="1" parent="1" source="comp_cl" target="comprovante"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
